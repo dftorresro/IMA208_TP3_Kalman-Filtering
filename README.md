@@ -26,11 +26,11 @@ where:
 The Kalman Filter estimates the state $x_k$ from the measurements $z_k$ by computing a series of steps, namely the *Prediction* and *Update* steps. The key equations for these steps are:
 
 - **Prediction**:
-    - Predicted State Estimate: $$\\hat{x}_{k|k-1} = A\\hat{x}_{k-1|k-1} + Bu_{k}$$
+    - Predicted State Estimate: $$\hat{x} _ {k|k-1} = A\hat{x} _ {k-1|k-1} + Bu_{k}$$
     - Predicted Covariance Estimate: $$P_{k|k-1} = AP_{k-1|k-1}A^T + Q$$
 - **Update**:
     - Kalman Gain: $$K_k = P_{k|k-1}H^T(HP_{k|k-1}H^T + R)^{-1}$$
-    - Updated State Estimate: $$\\hat{x}_{k|k} = \\hat{x}_{k|k-1} + K_k(z_k - H\\hat{x}_{k|k-1})$$
+    - Updated State Estimate: $$\hat{x}_ {k|k} = \hat{x}_ {k|k-1} + K_k(z_k - H\hat{x}_{k|k-1})$$
     - Updated Covariance Estimate: $$P_{k|k} = (I - K_kH)P_{k|k-1}$$
 
 These equations form the basis of the Kalman Filter, enabling it to estimate the state of a dynamic system in a way that is optimal under the assumption of Gaussian errors.
@@ -53,4 +53,5 @@ Make sure you have the following Python packages installed:
 - scipy
 
 These can be installed using pip:
-pip install numpy matplotlib scipy
+
+`pip install numpy matplotlib scipy`
